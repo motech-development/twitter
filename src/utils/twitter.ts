@@ -1,5 +1,6 @@
 import axios from 'axios';
 import type { AxiosInstance } from 'axios';
+import twitter from 'twitter-text';
 
 interface IData<T> {
   data: T[];
@@ -54,8 +55,14 @@ class Twitter {
         params,
       },
     );
+    const formatted = data.data.map(({ text, ...rest }) => ({
+      text: twitter.autoLink(text, {}),
+      ...rest,
+    }));
 
-    return data;
+    return {
+      data: formatted,
+    };
   }
 }
 
