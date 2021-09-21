@@ -1,8 +1,11 @@
 import type { AWS } from '@serverless/typescript';
+import { tweets } from './src/handlers';
 
 const config: AWS = {
   frameworkVersion: '2',
-  functions: {},
+  functions: {
+    tweets,
+  },
   plugins: ['serverless-esbuild'],
   provider: {
     apiGateway: {
@@ -13,6 +16,7 @@ const config: AWS = {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
     },
+    lambdaHashingVersion: '20201221',
     name: 'aws',
     runtime: 'nodejs14.x',
   },
