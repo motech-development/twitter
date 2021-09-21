@@ -4,24 +4,24 @@ module.exports = {
     node: true,
   },
   extends: [
-    "eslint:recommended",
-    "airbnb-base",
-    "airbnb-typescript/base",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
+    'eslint:recommended',
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ["./tsconfig.eslint.json", "./tsconfig.json"],
+    project: ['./tsconfig.eslint.json', './tsconfig.json'],
     tsconfigRootDir: __dirname,
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint'],
   root: true,
   rules: {
-    "sort-keys": [
-      "error",
-      "asc",
+    'sort-keys': [
+      'error',
+      'asc',
       {
         caseSensitive: true,
         natural: false,
