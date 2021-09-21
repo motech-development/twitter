@@ -9,7 +9,11 @@ const config: AWS = {
   plugins: ['serverless-esbuild'],
   provider: {
     apiGateway: {
-      apiKeys: ['${env:API_KEY}'],
+      apiKeys: [
+        {
+          value: '${env:API_KEY}',
+        },
+      ],
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
     },
