@@ -11,6 +11,14 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
+  overrides: [
+    {
+      files: 'src/handlers/*/handler.ts',
+      rules: {
+        'import/prefer-default-export': 'off',
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.eslint.json', './tsconfig.json'],
