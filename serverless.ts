@@ -9,6 +9,7 @@ const config: AWS = {
   plugins: ['serverless-esbuild'],
   provider: {
     apiGateway: {
+      apiKeys: ['${env:API_KEY}'],
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
     },
@@ -18,6 +19,7 @@ const config: AWS = {
     },
     lambdaHashingVersion: '20201221',
     name: 'aws',
+    region: 'eu-west-2',
     runtime: 'nodejs14.x',
   },
   service: 'twitter',

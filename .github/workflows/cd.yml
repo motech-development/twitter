@@ -9,6 +9,12 @@ jobs:
   ci:
     runs-on: ${{ matrix.os }}
 
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+
     strategy:
       matrix:
         os: [ubuntu-latest]

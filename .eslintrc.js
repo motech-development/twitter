@@ -18,6 +18,12 @@ module.exports = {
         'import/prefer-default-export': 'off',
       },
     },
+    {
+      files: 'serverless.ts',
+      rules: {
+        'no-template-curly-in-string': 'off',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
