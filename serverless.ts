@@ -20,6 +20,7 @@ const config: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
+      TWITTER_BEARER_TOKEN: '${env:TWITTER_BEARER_TOKEN}',
     },
     lambdaHashingVersion: '20201221',
     name: 'aws',
