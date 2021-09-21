@@ -47,4 +47,4 @@ jobs:
         run: yarn
 
       - name: Deploy 🚀
-        run: yarn deploy
+        run: yarn deploy --stage production
