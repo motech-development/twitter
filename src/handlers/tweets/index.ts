@@ -1,5 +1,3 @@
-import { body } from './schema';
-
 export default {
   events: [
     {
@@ -12,9 +10,6 @@ export default {
             paths: {
               id: true,
             },
-          },
-          schemas: {
-            'application/json': body,
           },
         },
       },
