@@ -2,11 +2,33 @@ import type { AWS } from '@serverless/typescript';
 import { tweets } from './src/handlers';
 
 const config: AWS = {
+  custom: {
+    esbuild: {
+      bundle: true,
+      define: {
+        'require.resolve': undefined,
+      },
+      exclude: ['aws-sdk'],
+      minify: false,
+      platform: 'node',
+      sourcemap: true,
+      target: 'node14',
+    },
+    prune: {
+      automatic: true,
+      includeLayers: true,
+      number: 1,
+    },
+  },
   frameworkVersion: '2',
   functions: {
     tweets,
   },
-  plugins: ['serverless-esbuild'],
+  plugins: [
+    'serverless-esbuild',
+    'serverless-offline',
+    'serverless-prune-plugin',
+  ],
   provider: {
     apiGateway: {
       apiKeys: [

@@ -5,6 +5,7 @@ export default {
         cors: true,
         method: 'get',
         path: 'v1/users/{id}/tweets',
+        private: true,
         request: {
           parameters: {
             paths: {
