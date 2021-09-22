@@ -30,5 +30,9 @@ export const response = <T>(
   statusCode: number,
 ): APIGatewayProxyResult => ({
   body: JSON.stringify(body),
+  headers: {
+    'Access-Control-Allow-Credentials': true,
+    'Access-Control-Allow-Origin': '*',
+  },
   statusCode,
 });
