@@ -5,6 +5,7 @@ import type {
 } from 'aws-lambda';
 import type { FromSchema } from 'json-schema-to-ts';
 import middy from '@middy/core';
+import cors from '@middy/http-cors';
 import middyJsonBodyParser from '@middy/http-json-body-parser';
 
 type TValidatedAPIGatewayProxyEvent<TBody, TPathParameters> = Omit<
@@ -23,16 +24,12 @@ type TValidatedEventAPIGatewayProxyEvent<TBody, TPathParameters> = Handler<
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const handler = <TBody, TPathParameters>(
   h: TValidatedEventAPIGatewayProxyEvent<TBody, TPathParameters>,
-) => middy(h).use(middyJsonBodyParser());
+) => middy(h).use(middyJsonBodyParser()).use(cors());
 
 export const response = <T>(
   body: T,
   statusCode: number,
 ): APIGatewayProxyResult => ({
   body: JSON.stringify(body),
-  headers: {
-    'Access-Control-Allow-Credentials': true,
-    'Access-Control-Allow-Origin': '*',
-  },
   statusCode,
 });

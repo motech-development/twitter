@@ -501,6 +501,13 @@
   resolved "https://registry.yarnpkg.com/@middy/core/-/core-2.5.1.tgz#972e0769621f09506863000a498f9d94060569b9"
   integrity sha512-kAZMhjcZRv2eqBd6uFBeaCuaSvhV0gb8XNl8kw/SiqbRptVh5FOb425gK3AtJda4VZPsQb4HeVN3G4Wzdb9o3g==
 
+"@middy/http-cors@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@middy/http-cors/-/http-cors-2.5.1.tgz#1b68d393f04e79748a18e9195cf67fc4c5566041"
+  integrity sha512-s/rGRxfRNzeuj+V7hfdwEBwtUG4FgDq/PZAEDhmxLtp/hWZy8R0ZcCsOlZnvQhkMuO1itvq6IzgFYk8X+1o/Ow==
+  dependencies:
+    "@middy/util" "^2.5.1"
+
 "@middy/http-json-body-parser@^2.5.1":
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/@middy/http-json-body-parser/-/http-json-body-parser-2.5.1.tgz#0cf6d6a9a6f71c48125f4f9adf54b2bef551a214"
