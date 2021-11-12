@@ -5803,10 +5803,10 @@ semver@^6.0.0, semver@^6.1.1, semver@^6.2.0, semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-serverless-esbuild@^1.18.1:
-  version "1.18.1"
-  resolved "https://registry.yarnpkg.com/serverless-esbuild/-/serverless-esbuild-1.18.1.tgz#bdf59852bd8730ce87aa0141b5dd5b0d581c27a7"
-  integrity sha512-jyQDHbYst9LgwUzKCYQ4ONpPUe2lNoNAxjXyXdAFBKTKk4Sm28TsFkfQHaVDn/px9g/7mBpaak5Dm5HnlPG4Pw==
+serverless-esbuild@^1.21.2:
+  version "1.21.2"
+  resolved "https://registry.yarnpkg.com/serverless-esbuild/-/serverless-esbuild-1.21.2.tgz#316381d671a09b63431bdd9f9af4b6e3f919a3c0"
+  integrity sha512-aW6yIZUGx3KppTujQz07nyBydPtEKTojjorFlwfJEernLjJN+5RTj5q2/31fpppeF0h/MhDpn36gLJwOVj+vHg==
   dependencies:
     archiver "^5.3.0"
     bestzip "^2.2.0"
@@ -5814,7 +5814,9 @@ serverless-esbuild@^1.18.1:
     esbuild ">=0.8"
     fs-extra "^9.0.1"
     globby "^11.0.1"
+    p-map "^4.0.0"
     ramda "^0.27.0"
+    semver "^7.3.5"
     string.prototype.matchall "^4.0.4"
 
 serverless-offline@^8.2.0:
