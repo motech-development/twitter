@@ -753,10 +753,10 @@
     ramda "^0.26.1"
     traverse "^0.6.6"
 
-"@serverless/typescript@^2.55.0":
-  version "2.55.0"
-  resolved "https://registry.yarnpkg.com/@serverless/typescript/-/typescript-2.55.0.tgz#e3b57758d5eb1501a71814d129fd57ae32dacd75"
-  integrity sha512-Q39+Iko5KExGxv41wJi5B5jcXr+HhEn5c6fIYxVSVB7ZXMCUcPcXrsovQWVFal4Z3aMVl5r6fwKeIC8EDO9jWA==
+"@serverless/typescript@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@serverless/typescript/-/typescript-3.0.0.tgz#ef17dd17f58735df2c8f49d6c1bd8a31d6eafe09"
+  integrity sha512-6+pieTUF3jcIcWH4/Z6kznn1jXiMjqW87XZKockbPFkcFJjCfMInW8z8l9l7ysJLYI/v2wo/mcZrzj55lgoDvA==
 
 "@serverless/utils-china@^1.1.4":
   version "1.1.4"
